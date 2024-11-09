@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<project name="CIS4400-MVCollision _lgl" database="LogicalDesign" id="LogicalDesign-21b" >
+	<schema name="CIS4400-MVCollision _lgl" >
+		<table name="collision_facts" prior="facts" >
+			<column name="collision_id" type="INT" jt="4" />
+			<column name="location_id" type="INT" jt="4" />
+			<column name="number_of_persons_injuried" type="INT" jt="4" />
+			<column name="number_of_persons_killed" type="INT" jt="4" />
+			<column name="number_of_pedestrians_injured" type="INT" jt="4" />
+			<column name="number_of_pedestrians_killed" type="INT" jt="4" />
+			<column name="number_of_cyclist_injuried" type="INT" jt="4" />
+			<column name="number_of_cyclist_killed" type="INT" jt="4" />
+			<column name="number_of_motorist_injuried" type="INT" jt="4" />
+			<column name="number_of_motorists_killed" type="INT" jt="4" />
+			<column name="vehicle_type_code_1" type="VARCHAR" length="100" jt="12" />
+			<column name="vehicle_type_code_2" type="VARCHAR" length="100" jt="12" />
+			<column name="contributing_factor_vehicle_1" type="VARCHAR" length="100" jt="12" />
+			<column name="contributing_factor_vehicle_2" type="VARCHAR" length="100" jt="12" />
+			<column name="public_property_damage" type="BOOLEAN" jt="-7" />
+			<column name="public_property_damage_type" type="VARCHAR" length="100" jt="12" />
+		</table>
+		<table name="dim_date" prior="Entity" >
+			<column name="date_id" type="INT" jt="4" mandatory="y" />
+			<column name="year_number" prior="date" type="INT" jt="4" />
+			<column name="month_number" prior="day_of_week" type="INT" jt="4" />
+			<column name="day_numeber" prior="month" type="INT" jt="4" />
+			<column name="week_numberr" prior="year" type="INT" jt="4" />
+			<column name="hour_number" type="INT" jt="4" />
+			<column name="week_of_month" type="INT" jt="4" />
+			<column name="week_of_year" type="INT" jt="4" />
+			<column name="month_name" type="VARCHAR" length="50" jt="12" />
+			<column name="day_name" type="VARCHAR" length="50" jt="12" />
+			<column name="is_daylight_saving" type="BOOLEAN" jt="-7" />
+			<column name="timestap_isoformat" type="DATETIME" length="12" jt="93" />
+			<index name="pk_dim_date" unique="PRIMARY_KEY" >
+				<column name="date_id" />
+			</index>
+		</table>
+		<table name="dim_drivers_license" prior="dim_drivers" >
+			<column name="driver_id" type="INT" jt="4" mandatory="y" />
+			<column name="driver_license_status" type="CHAR" length="10" jt="1" />
+			<column name="state_registration" type="VARCHAR" length="100" jt="12" />
+			<column name="driver_sex" type="CHAR" length="10" jt="1" />
+			<column name="driver_license_jurisdition" type="CHAR" length="10" jt="1" />
+			<index name="pk_dim_drivers" unique="PRIMARY_KEY" >
+				<column name="driver_id" />
+			</index>
+		</table>
+		<table name="dim_factors" prior="dim_con" >
+			<column name="factor_id" type="INT" jt="4" mandatory="y" />
+			<column name="contributor_factors" type="VARCHAR" length="100" jt="12" />
+			<column name="travel_direction" type="VARCHAR" length="100" jt="12" />
+			<index name="pk_dim_factors" unique="PRIMARY_KEY" >
+				<column name="factor_id" />
+			</index>
+		</table>
+		<table name="dim_location" prior="Entity" >
+			<column name="location_id" type="INT" jt="4" mandatory="y" />
+			<column name="borough" type="VARCHAR" length="100" jt="12" />
+			<column name="zip_code" type="VARCHAR" length="100" jt="12" />
+			<column name="latitide" type="DECIMAL" length="100" jt="3" />
+			<column name="longtitudee" type="DECIMAL" length="100" jt="3" />
+			<column name="on_street_name" type="VARCHAR" length="100" jt="12" />
+			<column name="cross_street_name" type="VARCHAR" length="100" jt="12" />
+			<column name="off_street_name" type="VARCHAR" length="100" jt="12" />
+			<index name="pk_dim_location" unique="PRIMARY_KEY" >
+				<column name="location_id" />
+			</index>
+		</table>
+		<table name="dim_property" prior="dim_property_" >
+			<column name="property_id" type="INT" jt="4" mandatory="y" />
+			<column name="property_damage_type" type="VARCHAR" length="100" jt="12" />
+			<column name="property_damage" type="BOOLEAN" jt="-7" />
+			<index name="pk_dim_property" unique="PRIMARY_KEY" >
+				<column name="property_id" />
+			</index>
+		</table>
+		<table name="dim_vehicle_type" prior="dim_vehicle" >
+			<column name="vehicle_type_id" type="INT" jt="4" mandatory="y" />
+			<column name="vehicle_type_code" type="VARCHAR" length="100" jt="12" />
+			<column name="vehicle_make" type="VARCHAR" length="100" jt="12" />
+			<column name="vehicle_model" type="VARCHAR" length="100" jt="12" />
+			<column name="vehicle_year" type="INT" jt="4" />
+			<index name="pk_dim_vehicle_type" unique="PRIMARY_KEY" >
+				<column name="vehicle_type_id" />
+			</index>
+		</table>
+		<table name="dim_victim" prior="dim_" >
+			<column name="victim_id" type="INT" jt="4" mandatory="y" />
+			<column name="victim_type" type="VARCHAR" length="100" jt="12" />
+			<column name="victim_injury" type="VARCHAR" length="100" jt="12" />
+			<column name="victim_age" type="INT" jt="4" />
+			<column name="victim_sex" type="VARCHAR" length="10" jt="12" />
+			<column name="victim_role" type="VARCHAR" length="100" jt="12" />
+			<index name="pk_dim_victim" unique="PRIMARY_KEY" >
+				<column name="victim_id" />
+			</index>
+		</table>
+	</schema>
+	<layout name="Default Layout" id="Layout-211e" show_relation="columns" >
+		<entity schema="CIS4400-MVCollision _lgl" name="collision_facts" color="C1D8EE" x="935" y="476" />
+		<entity schema="CIS4400-MVCollision _lgl" name="dim_date" color="C1D8EE" x="527" y="323" />
+		<entity schema="CIS4400-MVCollision _lgl" name="dim_drivers_license" color="C1D8EE" x="629" y="578" />
+		<entity schema="CIS4400-MVCollision _lgl" name="dim_factors" color="C1D8EE" x="493" y="170" />
+		<entity schema="CIS4400-MVCollision _lgl" name="dim_location" color="C1D8EE" x="272" y="323" />
+		<entity schema="CIS4400-MVCollision _lgl" name="dim_property" color="C1D8EE" x="170" y="476" />
+		<entity schema="CIS4400-MVCollision _lgl" name="dim_vehicle_type" color="C1D8EE" x="867" y="255" />
+		<entity schema="CIS4400-MVCollision _lgl" name="dim_victim" color="C1D8EE" x="340" y="578" />
+		<callout x="51" y="51" pointer="Round" >
+			<comment><![CDATA[This is a layout - a diagram with tools.
+- Create new entities by right-clicking the layout. 
+- Double-click entity headers to edit.
+- For a better understanding of the schema, create multiple layouts.
+- Deploy the model into the database by converting it first to the physical design.]]></comment>
+		</callout>
+	</layout>
+</project>
