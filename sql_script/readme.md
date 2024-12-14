@@ -1,4 +1,7 @@
-This is the new schema that I build by sql query after I clean the data with the new data dictionary. 
+After I upload the data to Azure, I connected with Snowflake and I building all of the facts and dimension in snowflake. The sql code of each table will show in this folder. 
+
+Addtionally, the data dictionary has been updated after I clean the data during the extraction. Below is the new data dictionary. 
+
 
 
 ## Data Dictionary Updated: 
