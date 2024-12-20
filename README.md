@@ -164,13 +164,13 @@ This link is my tableau workbook link: https://us-east-1.online.tableau.com/t/ji
   Rush hours and specific months (spring and early fall) contribute disproportionately to injury rates.
 
 ## Futture Opportunities
-Keep Track of the Data and Keep Update: 
+1. Keep Track of the Data and Keep Update: 
   Develop a more accurate predictive model in the future to predict the high-risk areas and trends that can avoid 
-Incorporate with Smart City Initiatives: 
+2. Incorporate with Smart City Initiatives: 
   Work together with traffic management systems to maximize security measures on the roads.
-Provide Actionable insights: 
+3. Provide Actionable insights: 
   Assist the urban planners, engineers, policymakers and traffic safety department to create or adjust the city plans.
-Using Gamification to Raise Awareness:
+4. Using Gamification to Raise Awareness:
   Create gamified driver education apps or resources to cut down on dangerous driving practices.
 
 
