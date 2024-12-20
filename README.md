@@ -121,6 +121,10 @@ The Motor Vehicle Collision project's data architecture includes collecting coll
 
 ![image](https://github.com/user-attachments/assets/ef4869db-49d3-4365-bada-6fde5bec6b73)
 
+## Technical Architecture:
+
+<img width="1003" alt="Screenshot 2024-12-19 at 11 06 32 PM" src="https://github.com/user-attachments/assets/d4c20d0c-1bfb-4efc-a97d-1161bb39b071" />
+
 ## Data Visulation: 
 
 This link is my tableau workbook link: https://us-east-1.online.tableau.com/t/jiabiwu-99d149af69/authoring/CIS4400_Motor/HeatMap#1
