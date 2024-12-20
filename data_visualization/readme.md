@@ -5,6 +5,7 @@ This link is my tableau workbook link: https://us-east-1.online.tableau.com/t/ji
 
 1. Pie Chart Pedestrian: Brooklyn has the highest percentage of pedestrian injured
 
+
 2. Pie Chart Motorist: Queens has the highest percentage of motorist killed 
 
 3. Line Chart Crash Time: The trends of Pedestrian and Motorist injured are very similar. The climax of two trends are around 17:00, which when the night rush hour; during the midnight 23:00 to 0:00, the motorist trend also has high point, because the night that might hard to see for some motorist and the speed are fast. 
