@@ -97,5 +97,52 @@ Data From NYC Opendata: https://data.cityofnewyork.us/Public-Safety/Motor-Vehicl
 -CONTRIBUTING_FACTOR_2: Factors contributing to the collision for designated vehicle
 -VICTIM_SEX: Gender of victim
 
+## Information Architecture:
+
+![image](https://github.com/user-attachments/assets/17a6193d-a37e-4fa9-84de-f50390045927)
+
+-Gather Data: The dataset is the Motor Vehicle Collision from NYC Open Data Website;
+-Temporary Storage: This is a step that where raw data is held before it processed 
+-Clean Data: The clean data step is cleaned the missing data, remove erros, and correct the errors. 
+-Reformat: During this stage, the data is reformatted to meet the requirments, such as converting data types, structuring the data, and etc
+-Transform: the data will transform to create the nsights
+-Process: The data is prepared forr its final form before loading to the data warehouse
+-Loading: The data is ready to load into the data warehouse, put everything into db schema with facts and dimension
+-Data Warehouse: The destination of the data, it's reeady to use for the analyze
+
+
+## Data Architecture:
+
+![image](https://github.com/user-attachments/assets/7622cb2e-8f7a-41eb-9c50-cd65d47ac2f9)
+
+The Motor Vehicle Collision project's data architecture includes collecting collision data from the NYC Open Data website, temporarily storing it, and then processing it via steps of transformation, reformatting, and cleaning. A primary fact table with accident facts relates to dimension tables for attributes like date, location, vehicle type, and victims once this processed data has been imported into a data mart with a star schema. Lastly, dashboards and reports can be created thanks to the data mart's support for data visualization tools. Stakeholders may examine accident trends and make data-driven decisions for public safety thanks to this architecture's guaranteed effective data flow, optimized querying, and easily available insights.
+
+## DBSchema: 
+
+![image](https://github.com/user-attachments/assets/ef4869db-49d3-4365-bada-6fde5bec6b73)
+
+## Data Visulation: 
+
+This link is my tableau workbook link: https://us-east-1.online.tableau.com/t/jiabiwu-99d149af69/authoring/CIS4400_Motor/HeatMap#1
+
+
+1. Pie Chart Pedestrian: Brooklyn has the highest percentage of pedestrian injured
+![image](https://github.com/user-attachments/assets/85aa93ce-f767-47e0-abce-063752918f06)
+
+
+2. Pie Chart Motorist: Queens has the highest percentage of motorist killed 
+![image](https://github.com/user-attachments/assets/33fea369-bd37-4299-8dea-2fe4673b2867)
+
+3. Line Chart Crash Time: The trends of Pedestrian and Motorist injured are very similar. The climax of two trends are around 17:00, which when the night rush hour; during the midnight 23:00 to 0:00, the motorist trend also has high point, because the night that might hard to see for some motorist and the speed are fast. 
+![image](https://github.com/user-attachments/assets/f42c156f-7269-4f91-a96d-dde597578ebe)
+
+4. Line Chart Crash Date: The trend shows the climax during summer time, during the summer vacation, family are travling around; during Feburary has the low point is because during winter that is dangerous to drive in the low temperature. 
+![image](https://github.com/user-attachments/assets/39367bb2-5c99-441d-8148-4758d8a3103e)
+
+5. Column Chart Fatalities By Contributing Factor: The most effective factor is Driver Inattenion/Distraction
+![image](https://github.com/user-attachments/assets/8ca7ee41-7e95-4e3b-b935-3e74b8c8347b)
+
+6. Heat Map Number of Motorist Injured by Borough and Month: Brooklyn has the highest amount of motorist injured in June. 
+![image](https://github.com/user-attachments/assets/3fa7b808-a7b6-44fb-8733-9be4c636eb23)
 
 
