@@ -150,3 +150,28 @@ This link is my tableau workbook link: https://us-east-1.online.tableau.com/t/ji
 ![image](https://github.com/user-attachments/assets/3fa7b808-a7b6-44fb-8733-9be4c636eb23)
 
 
+## Summary
+1. Borough-Specific Trends:
+  Brooklyn has the highest proportion of pedestrian injuries (35.15%), while Queens leads in motorist fatalities (33.33%), indicating the need for targeted safety measures in these areas.
+  Staten Island consistently exhibits the lowest rates of both injuries and fatalities, likely due to its suburban layout and lower traffic density.
+2. Time-of-Day Patterns:
+  Peak collisions occur during morning (7-9 AM) and evening (4-7 PM) rush hours, correlating with high traffic volumes.
+  Late-night hours (12-6 AM) have the lowest number of collisions, reflecting reduced road activity.
+3. Seasonal Trends:
+  Injuries peak in May and September, likely due to increased outdoor activity and travel, while February sees the lowest rates due to colder weather.
+4. Overall Risk Areas:
+  Brooklyn and Queens emerge as high-risk boroughs for both motorists and pedestrians.
+  Rush hours and specific months (spring and early fall) contribute disproportionately to injury rates.
+
+## Futture Opportunities
+Keep Track of the Data and Keep Update: 
+  Develop a more accurate predictive model in the future to predict the high-risk areas and trends that can avoid 
+Incorporate with Smart City Initiatives: 
+  Work together with traffic management systems to maximize security measures on the roads.
+Provide Actionable insights: 
+  Assist the urban planners, engineers, policymakers and traffic safety department to create or adjust the city plans.
+Using Gamification to Raise Awareness:
+  Create gamified driver education apps or resources to cut down on dangerous driving practices.
+
+
+
